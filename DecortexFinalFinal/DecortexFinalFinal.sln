@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decortex", "Decortex\Decortex.csproj", "{5B376B11-D6DA-462A-8D55-FA7F99169B9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DALC", "DALC\DALC.csproj", "{EDD73C8A-569A-4ED6-87F2-EF6E3F2DAA17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Negocio", "Negocio\Negocio.csproj", "{4C872912-5877-4AB9-AB35-9F04D0F14C25}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B376B11-D6DA-462A-8D55-FA7F99169B9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B376B11-D6DA-462A-8D55-FA7F99169B9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B376B11-D6DA-462A-8D55-FA7F99169B9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B376B11-D6DA-462A-8D55-FA7F99169B9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDD73C8A-569A-4ED6-87F2-EF6E3F2DAA17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDD73C8A-569A-4ED6-87F2-EF6E3F2DAA17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDD73C8A-569A-4ED6-87F2-EF6E3F2DAA17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDD73C8A-569A-4ED6-87F2-EF6E3F2DAA17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C872912-5877-4AB9-AB35-9F04D0F14C25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C872912-5877-4AB9-AB35-9F04D0F14C25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C872912-5877-4AB9-AB35-9F04D0F14C25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C872912-5877-4AB9-AB35-9F04D0F14C25}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

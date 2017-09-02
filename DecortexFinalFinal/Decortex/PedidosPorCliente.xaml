@@ -1,0 +1,34 @@
+﻿<Window x:Class="Decortex.PedidosPorCliente"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Decortex"
+        mc:Ignorable="d"
+        Title="Pedidos por Cliente" Height="720" Width="1000" Icon="Images/Content/ico.png" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+
+    <Window.Background>
+        <ImageBrush ImageSource="Images/Content/fondo-01.jpg"/>
+    </Window.Background>
+
+    <Grid>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="205" Margin="46,29,0,0" VerticalAlignment="Top" Width="908" FontFamily="Verdana" FontSize="16" CanUserAddRows="False" SelectionChanged="dataGrid_SelectionChanged"/>
+        <Label x:Name="label" Content="Ubicación:" HorizontalAlignment="Left" Margin="90,342,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.851,-0.372" FontFamily="Tahoma" FontSize="16"/>
+        <TextBox x:Name="txtUbicacion" HorizontalAlignment="Left" Height="23" Margin="195,348,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="396" FontFamily="Verdana" FontSize="16" PreviewTextInput="txtUbicacion_PreviewTextInput"/>
+        <Label x:Name="label_Copy" Content="Ancho (metros):" HorizontalAlignment="Left" Margin="65,393,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.851,-0.372" FontFamily="Tahoma" FontSize="16"/>
+        <TextBox x:Name="txtAncho" HorizontalAlignment="Left" Height="23" Margin="195,393,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132" FontFamily="Verdana" FontSize="16" PreviewTextInput="txtAncho_PreviewTextInput"/>
+        <Label x:Name="label_Copy3" Content="Alto (metros):" HorizontalAlignment="Left" Margin="356,393,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.851,-0.372" FontFamily="Tahoma" FontSize="16"/>
+        <TextBox x:Name="txtAlto" HorizontalAlignment="Left" Height="23" Margin="470,393,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="121" FontFamily="Verdana" FontSize="16" PreviewTextInput="txtAlto_PreviewTextInput"/>
+        <Button x:Name="btn_agregar" Content="Agregar" Height="38" Margin="302,491,520.667,0" VerticalAlignment="Top" Background="#FF5DA8B4" FontFamily="Verdana" FontSize="18" Click="btn_agregar_Click"/>
+        <Label x:Name="label_Copy1" Content="Id:" HorizontalAlignment="Left" Margin="172,258,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.851,-0.372" FontFamily="Tahoma" FontSize="16"/>
+        <TextBox x:Name="txtCodigo" HorizontalAlignment="Left" Height="23" Margin="290,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="328" FontFamily="Verdana" FontSize="16"/>
+        <Button x:Name="btn_Eliminar" Content="Eliminar" Height="38" Margin="668,258,153.667,0" VerticalAlignment="Top" Background="#FF5DA8B4" FontFamily="Verdana" FontSize="18" Click="btn_Eliminar_Click"/>
+        <Label x:Name="label_Copy5" Content="Tela:" HorizontalAlignment="Left" Margin="629,393,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.851,-0.372" FontFamily="Tahoma" FontSize="16" Width="77"/>
+        <TextBox x:Name="txtTela" HorizontalAlignment="Left" Height="23" Margin="682,393,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="257" FontFamily="Verdana" FontSize="16" PreviewTextInput="txtTela_PreviewTextInput"/>
+        <Label x:Name="label_Copy2" Content="Posición:" HorizontalAlignment="Left" Margin="600,342,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.851,-0.372" FontFamily="Tahoma" FontSize="16" Width="77"/>
+        <TextBox x:Name="txtPosicion" HorizontalAlignment="Left" Height="23" Margin="682,348,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="257" FontFamily="Verdana" FontSize="16" PreviewTextInput="txtPosicion_PreviewTextInput"/>
+        <Button x:Name="btn_Volver" Content="Volver" Height="38" Margin="439,613,383.667,0" VerticalAlignment="Top" Background="#FF5DA8B4" FontFamily="Verdana" FontSize="18" Click="btn_Volver_Click"/>
+        <Button x:Name="btn_Editar" Content="Editar" Height="38" Margin="568,491,254.667,0" VerticalAlignment="Top" Background="#FF5DA8B4" FontFamily="Verdana" FontSize="18" Click="btn_Editar_Click"/>
+
+    </Grid>
+</Window>

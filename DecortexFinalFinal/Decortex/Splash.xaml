@@ -1,0 +1,13 @@
+﻿<Window x:Class="Decortex.Splash"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Decortex"
+        mc:Ignorable="d"
+        Title="Decortex " Height="300" Width="300" WindowStyle="None" ResizeMode="NoResize" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" Background="{x:Null}" AllowsTransparency="True" Loaded="Window_Loaded">
+    <Grid>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="114" VerticalAlignment="Top" Width="300" Source="Images/Splash/15781893_10211748647256770_1206875288_n.png" Margin="0,83,0,0"/>
+        <ProgressBar x:Name="pbLoad" HorizontalAlignment="Left" Height="8" Margin="0,197,0,0" VerticalAlignment="Top" Width="300" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2E1ECD" Value="45"/>
+    </Grid>
+</Window>
