@@ -22,6 +22,7 @@ namespace Decortex
         public ListaDeudores()
         {
             InitializeComponent();
+            txtCodigo.IsEnabled = false;
         }
 
         private void btn_Pago_Click(object sender, RoutedEventArgs e)
