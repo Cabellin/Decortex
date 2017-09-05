@@ -23,5 +23,10 @@ namespace Decortex
         {
             InitializeComponent();
         }
+
+        private void btn_Pago_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

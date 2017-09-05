@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Decortex"
         mc:Ignorable="d"
-        Title="Pantalla Pedidos" Height="450" Width="1000" Icon="Images/Content/ico.png">
+        Title="Pantalla Pedidos" Height="450" Width="1000" Icon="Images/Content/ico.png" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
 
     <Window.Background>
         <ImageBrush ImageSource="Images/Content/fondo-01.jpg"/>
