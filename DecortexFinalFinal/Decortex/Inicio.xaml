@@ -12,10 +12,10 @@
     </Window.Background>
 
     <Grid>
-        <Button x:Name="btn_Clientes" Content="CLIENTES" Height="72" Margin="127,58,112,0" VerticalAlignment="Top" Background="#FF5DA8B4" FontFamily="Verdana" FontSize="18" Click="btn_Clientes_Click"/>
-        <Button x:Name="btn_Pedidos" Content="PEDIDOS" Height="72" Margin="127,0,112,217" VerticalAlignment="Bottom" Background="#FF5DA8B4" FontFamily="Verdana" FontSize="18" Click="btn_Pedidos_Click"/>
-        <Label x:Name="label" Content="" HorizontalAlignment="Left" Margin="309,285,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btn_Deudores" Content="LISTA DEUDORES" Height="72" Margin="127,0,112,88" VerticalAlignment="Bottom" Background="#FF5DA8B4" FontFamily="Verdana" FontSize="18" Click="btn_Deudores_Click"/>
-        <Label x:Name="label1" Content="" HorizontalAlignment="Left" Margin="281,400,0,0" VerticalAlignment="Top" Width="171" FontFamily="Verdana" FontSize="16"/>
+        <Button x:Name="btn_Clientes" Content="CLIENTES" Height="72" Margin="126,52,113,0" VerticalAlignment="Top" Background="#FF5DA8B4" FontFamily="Verdana" FontSize="18" Click="btn_Clientes_Click"/>
+        <Button x:Name="btn_Pedidos" Content="PEDIDOS" Height="72" Margin="126,0,113,223" VerticalAlignment="Bottom" Background="#FF5DA8B4" FontFamily="Verdana" FontSize="18" Click="btn_Pedidos_Click"/>
+        <Label x:Name="label" Content="" HorizontalAlignment="Left" Margin="308,279,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btn_Deudores" Content="LISTA DEUDORES" Height="72" Margin="126,0,113,101" VerticalAlignment="Bottom" Background="#FF5DA8B4" FontFamily="Verdana" FontSize="18" Click="btn_Deudores_Click"/>
+        <Label x:Name="label1" Content="" HorizontalAlignment="Left" Margin="273,398,0,0" VerticalAlignment="Top" Width="171" FontFamily="Verdana" FontSize="18"/>
     </Grid>
 </Window>

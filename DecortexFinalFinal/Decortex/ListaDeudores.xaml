@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Decortex"
         mc:Ignorable="d"
-        Title="ListaDeudores" Height="300" Width="300">
+        Title="Pantalla Deudores" Height="450" Width="1000" Icon="Images/Content/ico.png" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Window.Background>
+        <ImageBrush ImageSource="Images/Content/fondo-01.jpg"/>
+    </Window.Background>
+
     <Grid>
-        
+        <Label x:Name="label_Copy1" Content="Id:" HorizontalAlignment="Left" Margin="177,299,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.851,-0.372" FontFamily="Tahoma" FontSize="16"/>
+        <TextBox x:Name="txtCodigo" HorizontalAlignment="Left" Height="23" Margin="295,305,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="328" FontFamily="Verdana" FontSize="16"/>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="205" Margin="45,46,0,0" VerticalAlignment="Top" Width="908" FontFamily="Verdana" FontSize="16" SelectionChanged="dataGrid_SelectionChanged" CanUserAddRows="False"/>
+        <Button x:Name="btn_Ver" Content="Pago Pedido" Height="38" Margin="673,299,149,0" VerticalAlignment="Top" Background="#FF5DA8B4" FontFamily="Verdana" FontSize="18" Click="btn_Pago_Click"/>
+
     </Grid>
 </Window>
