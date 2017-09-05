@@ -41,5 +41,15 @@ namespace Decortex
                 cor.Show();
             }
         }
+
+        private void btn_Deudores_Click(object sender, RoutedEventArgs e)
+        {
+            if (Application.Current.Windows.OfType<ListaDeudores>().Count() == 0)
+            {
+                ListaDeudores lis = new ListaDeudores();
+                lis.Show();
+            }
+        }
+
     }
 }

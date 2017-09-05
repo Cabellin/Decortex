@@ -23,6 +23,7 @@ namespace Negocio
                 c.Tela = temp.Tela;
                 c.Ubicacion = temp.Ubicacion;
                 c.Valor = temp.Valor;
+                c.TipoCortina = temp.TipoCortina;
                 cortinas.Add(c);
             }
             return cortinas;

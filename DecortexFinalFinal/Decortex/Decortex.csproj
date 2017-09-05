@@ -112,6 +112,12 @@
     <Compile Include="Inicio.xaml.cs">
       <DependentUpon>Inicio.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ListaDeudores.xaml.cs">
+      <DependentUpon>ListaDeudores.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pago.xaml.cs">
+      <DependentUpon>Pago.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PedidosPorCliente.xaml.cs">
       <DependentUpon>PedidosPorCliente.xaml</DependentUpon>
     </Compile>
@@ -179,6 +185,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Inicio.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListaDeudores.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pago.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

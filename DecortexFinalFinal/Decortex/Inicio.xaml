@@ -5,15 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Decortex"
         mc:Ignorable="d"
-        Title="Inicio - Aplicación Decortex 1.0" Height="400" Width="700" Icon="Images/Content/ico.png" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="Inicio - Aplicación Decortex 1.0" Height="500" Width="700" Icon="Images/Content/ico.png" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
 
     <Window.Background>
         <ImageBrush ImageSource="Images/Content/fondo-01.jpg"/>
     </Window.Background>
 
     <Grid>
-        <Button x:Name="btn_Clientes" Content="CLIENTES" Height="71.875" Margin="127.25,77.166,111.625,0" VerticalAlignment="Top" Background="#FF5DA8B4" FontFamily="Verdana" FontSize="18" Click="btn_Clientes_Click"/>
-        <Button x:Name="btn_Pedidos" Content="PEDIDOS" Height="71.875" Margin="127.25,0,111.625,92.876" VerticalAlignment="Bottom" Background="#FF5DA8B4" FontFamily="Verdana" FontSize="18" Click="btn_Pedidos_Click"/>
-        <Label x:Name="label" Content="" HorizontalAlignment="Left" Margin="309,316,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btn_Clientes" Content="CLIENTES" Height="72" Margin="127,58,112,0" VerticalAlignment="Top" Background="#FF5DA8B4" FontFamily="Verdana" FontSize="18" Click="btn_Clientes_Click"/>
+        <Button x:Name="btn_Pedidos" Content="PEDIDOS" Height="72" Margin="127,0,112,217" VerticalAlignment="Bottom" Background="#FF5DA8B4" FontFamily="Verdana" FontSize="18" Click="btn_Pedidos_Click"/>
+        <Label x:Name="label" Content="" HorizontalAlignment="Left" Margin="309,285,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btn_Deudores" Content="LISTA DEUDORES" Height="72" Margin="127,0,112,88" VerticalAlignment="Bottom" Background="#FF5DA8B4" FontFamily="Verdana" FontSize="18" Click="btn_Deudores_Click"/>
+        <Label x:Name="label1" Content="" HorizontalAlignment="Left" Margin="281,400,0,0" VerticalAlignment="Top" Width="171" FontFamily="Verdana" FontSize="16"/>
     </Grid>
 </Window>

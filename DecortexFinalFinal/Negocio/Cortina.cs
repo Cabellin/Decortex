@@ -17,6 +17,12 @@ namespace Negocio
         public double MetrosCuadrados { get; set; }
         public int Valor { get; set; }
         public int ClienteCodigo { get; set; }
+        public string TipoCortina { get; set; }
+        public string Descripcion { get; set; }
+        public string TipoPago { get; set; }
+        public int abono { get; set; }
+        public int saldo { get; set; }
+        public DateTime FechaCreacion { get; set; }
 
         private void Init()
         {
@@ -28,6 +34,9 @@ namespace Negocio
             MetrosCuadrados = 0;
             Valor = 0;
             ClienteCodigo = 0;
+            TipoCortina = string.Empty;
+            abono = 0;
+            saldo = 0;
         }
 
         public Cortina()
@@ -65,6 +74,12 @@ namespace Negocio
                 cortina.MetrosCuadrados = MetrosCuadrados;
                 cortina.Valor = Valor;
                 cortina.ClienteCodigo = ClienteCodigo;
+                cortina.TipoCortina = TipoCortina;
+                cortina.Descripcion = Descripcion;
+                cortina.TipoPago = TipoPago;
+                cortina.Abono = 0;
+                cortina.Saldo = Valor;
+                cortina.FechaCreacion = DateTime.Now;
                 CommonBC.ModeloDecortex.Cortina.Add(cortina);
                 CommonBC.ModeloDecortex.SaveChanges();
                 return true;
@@ -88,6 +103,9 @@ namespace Negocio
                 cortina.MetrosCuadrados = MetrosCuadrados;
                 cortina.Valor = Valor;
                 cortina.ClienteCodigo = ClienteCodigo;
+                cortina.TipoCortina = TipoCortina;
+                cortina.Descripcion = Descripcion;
+                cortina.TipoPago = TipoPago;
                 CommonBC.ModeloDecortex.SaveChanges();
                 return true;
             }

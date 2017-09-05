@@ -30,6 +30,7 @@ namespace Decortex
             InitializeComponent();
             CargarLista();
             txtCodigo.IsEnabled = false;
+            txtPrecio.IsEnabled = false;
         }
 
 
@@ -368,6 +369,11 @@ namespace Decortex
             else
 
                 e.Handled = true;
+        }
+
+        private void btn_Ver_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
