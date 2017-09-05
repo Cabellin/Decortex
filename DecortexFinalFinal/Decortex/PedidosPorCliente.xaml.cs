@@ -31,6 +31,40 @@ namespace Decortex
             CargarLista();
             txtCodigo.IsEnabled = false;
             txtPrecio.IsEnabled = false;
+
+            List<string> cortinas = new List<string>();
+            cortinas.Add("Seleccione");
+            cortinas.Add("Cortinas velo");
+            cortinas.Add("Cortinas gruesa");
+            cortinas.Add("Cortinas Black out");
+            cortinas.Add("Cortinas Sun Out");
+            cortinas.Add("Cortinas Roller Screen");
+            cortinas.Add("Cortinas Roller Black Out");
+            cortinas.Add("Cortinas Roller Rústicas");
+            cortinas.Add("Cortinas Roller Gasa");
+            cortinas.Add("Cortinas Verticales Screen");
+            cortinas.Add("Cortinas Verticales Black Out");
+            cortinas.Add("Cortinas Verticales Rusticas");
+            cortinas.Add("Cortinas Verticales Metálicas");
+            cortinas.Add("Cortinas Duo Traslúcida");
+            cortinas.Add("Cortinas Duo Black Out");
+            cortinas.Add("Minipersianas");
+            cortinas.Add("Minipersianas Perforadas");
+            cortinas.Add("Minipersianas Madera");
+            cortinas.Add("Micropersianas");
+
+            ddlCortina.ItemsSource = cortinas;
+            ddlCortina.SelectedIndex = 0;
+
+            List<string> modoPago = new List<string>();
+            modoPago.Add("Seleccione");
+            modoPago.Add("Cheque");
+            modoPago.Add("Efectivo");
+            modoPago.Add("Transferencia");
+            modoPago.Add("Tarjeta");
+            
+            ddlPago.ItemsSource = modoPago;
+            ddlPago.SelectedIndex = 0;
         }
 
 
@@ -374,6 +408,28 @@ namespace Decortex
         private void btn_Ver_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void txtAncho_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (!txtAlto.Text.Equals("") && !txtAncho.Text.Equals(""))
+            {
+                txtPrecio.Text = valor().ToString();
+            }
+            else
+            {
+                txtPrecio.Text = string.Empty;
+            }
+        }
+
+        private void chkPrecio_Checked(object sender, RoutedEventArgs e)
+        {
+            txtPrecio.IsEnabled = true;
+        }
+
+        private void chkPrecio_Unchecked(object sender, RoutedEventArgs e)
+        {
+            txtPrecio.IsEnabled = false;
         }
     }
 }

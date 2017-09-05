@@ -27,6 +27,5 @@ namespace DALC
     
         public DbSet<Cliente> Cliente { get; set; }
         public DbSet<Cortina> Cortina { get; set; }
-        public DbSet<sysdiagrams> sysdiagrams { get; set; }
     }
 }

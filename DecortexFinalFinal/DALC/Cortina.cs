@@ -23,6 +23,12 @@ namespace DALC
         public double MetrosCuadrados { get; set; }
         public int Valor { get; set; }
         public int ClienteCodigo { get; set; }
+        public string TipoPago { get; set; }
+        public Nullable<int> Abono { get; set; }
+        public Nullable<int> Saldo { get; set; }
+        public string TipoCortina { get; set; }
+        public Nullable<System.DateTime> FechaCreacion { get; set; }
+        public string Descripcion { get; set; }
     
         public virtual Cliente Cliente { get; set; }
     }
