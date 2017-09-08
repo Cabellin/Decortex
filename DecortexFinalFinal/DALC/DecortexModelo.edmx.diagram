@@ -4,8 +4,8 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="e8829d7de79e4abfb9a9686cdfc525fb" Name="Diagram1">
-        <EntityTypeShape EntityType="DecortexModel.Cliente" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
+      <Diagram DiagramId="a158939edcd345b4a4f86a12aa96367c" Name="Diagram1">
+        <EntityTypeShape EntityType="DecortexModel.Cliente" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
         <EntityTypeShape EntityType="DecortexModel.Cortina" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <AssociationConnector Association="DecortexModel.FK_Cortina_Cliente" ManuallyRouted="false" />
       </Diagram>

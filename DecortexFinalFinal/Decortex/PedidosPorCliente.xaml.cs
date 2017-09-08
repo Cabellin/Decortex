@@ -116,16 +116,13 @@ namespace Decortex
             chkPrecio.IsChecked = false;
         }
 
-        private float metroCuadrado()
+        private double metroCuadrado()
         {
-            float metrocuadrado = 0;
-            double round = 0;
+            double metrocuadrado = 0;
             try
             {
-                metrocuadrado = float.Parse(txtAncho.Text) * float.Parse(txtAlto.Text);
-                round = Math.Round(metrocuadrado,-1);
-                metrocuadrado = float.Parse(round.ToString());
-                
+                metrocuadrado = double.Parse(txtAncho.Text) * double.Parse(txtAlto.Text);
+                metrocuadrado = Math.Round(metrocuadrado,2);
             }
             catch (Exception)
             {
@@ -240,8 +237,8 @@ namespace Decortex
 
             Cortina c = new Cortina();
             c.Ubicacion = txtUbicacion.Text;
-            c.Ancho = float.Parse(txtAncho.Text);
-            c.Alto = float.Parse(txtAlto.Text);
+            c.Ancho = double.Parse(txtAncho.Text);
+            c.Alto = double.Parse(txtAlto.Text);
             c.Tela = txtTela.Text;
             c.Posicion = txtPosicion.Text;
             c.MetrosCuadrados = this.metroCuadrado();
@@ -250,6 +247,7 @@ namespace Decortex
             c.abono = 0;
             c.saldo = int.Parse(txtPrecio.Text);
             c.FechaCreacion = DateTime.Now;
+            c.FechaActualizacion = DateTime.Now;
             c.TipoPago = ddlPago.SelectedItem.ToString();
             c.TipoCortina = ddlCortina.SelectedItem.ToString();
             c.ClienteCodigo = Properties.Settings.Default.Codigo;
@@ -401,7 +399,8 @@ namespace Decortex
             c.Descripcion = txtDescripcion.Text;
             c.abono = 0;
             c.saldo = int.Parse(txtPrecio.Text);
-            c.FechaCreacion = DateTime.Now;
+            c.FechaCreacion = c.FechaCreacion;
+            c.FechaActualizacion = DateTime.Now;
             c.TipoPago = ddlPago.SelectedItem.ToString();
             c.TipoCortina = ddlCortina.SelectedItem.ToString();
             c.ClienteCodigo = Properties.Settings.Default.Codigo;
@@ -522,7 +521,21 @@ namespace Decortex
 
         private void btn_Ver_Click(object sender, RoutedEventArgs e)
         {
+            if (txtCodigo.Text.Length == 0)
+            {
+                MessageBox.Show("Debe Seleccionar un Código");
+                txtCodigo.Text = string.Empty;
+                return;
+            }
 
+            if (Application.Current.Windows.OfType<Pago>().Count() == 0)
+            {
+                Properties.Settings.Default.idCortina = int.Parse(txtCodigo.Text);
+
+                Pago p = new Pago();
+                p.Show();
+                Close();
+            }
         }
 
         private void txtAncho_TextChanged(object sender, TextChangedEventArgs e)

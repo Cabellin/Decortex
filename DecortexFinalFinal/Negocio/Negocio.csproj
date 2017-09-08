@@ -52,6 +52,8 @@
     <Compile Include="Cortina.cs" />
     <Compile Include="CortinaCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TodosLosPedidos.cs" />
+    <Compile Include="TodosLosPedidosCollection.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DALC\DALC.csproj">

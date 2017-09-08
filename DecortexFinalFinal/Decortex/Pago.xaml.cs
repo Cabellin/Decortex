@@ -25,6 +25,7 @@ namespace Decortex
         public Pago()
         {
             InitializeComponent();
+            CargarLista();
         }
 
         [DllImport("user32.dll")]
@@ -42,7 +43,30 @@ namespace Decortex
 
         private void btn_Abono_Click(object sender, RoutedEventArgs e)
         {
+            if (txtNuevoAbono.Text.Length == 0)
+            {
+                MessageBox.Show("Debe ingresar un abono");
+                return;
+            }
 
+            if (int.Parse(txtNuevoAbono.Text) == 0)
+            {
+                MessageBox.Show("Abono debe ser mayor a 0");
+                return;
+            }
+
+            if (int.Parse(txtNuevoAbono.Text) == 0)
+            {
+                MessageBox.Show("Abono debe ser mayor a 0");
+                return;
+            }
+
+        }
+
+        private void CargarLista()
+        {
+            CortinaCollection c = new CortinaCollection();
+            dgPago.ItemsSource = c.Read(Properties.Settings.Default.Codigo);
         }
 
         private void dgPago_SelectionChanged(object sender, SelectionChangedEventArgs e)

@@ -30,7 +30,7 @@ namespace Decortex
 
         private void CargarLista()
         {
-            CortinaCollection c = new CortinaCollection();
+            TodosLosPedidosCollection c = new TodosLosPedidosCollection();
             dataGrid.ItemsSource = c.ReadAll();
         }
 

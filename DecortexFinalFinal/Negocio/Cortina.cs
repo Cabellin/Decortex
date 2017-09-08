@@ -20,9 +20,11 @@ namespace Negocio
         public string TipoCortina { get; set; }
         public string Descripcion { get; set; }
         public string TipoPago { get; set; }
-        public int abono { get; set; }
-        public int saldo { get; set; }
+        public int? abono { get; set; }
+        public int? saldo { get; set; }
         public DateTime FechaCreacion { get; set; }
+
+        public DateTime FechaActualizacion { get; set; }
 
         private void Init()
         {
@@ -39,7 +41,8 @@ namespace Negocio
             TipoPago = string.Empty;
             abono = 0;
             saldo = 0;
-            FechaCreacion = DateTime.Now;
+            FechaCreacion = new DateTime();
+            FechaActualizacion = new DateTime();
         }
 
         public Cortina()
@@ -81,8 +84,9 @@ namespace Negocio
                 cortina.Descripcion = Descripcion;
                 cortina.TipoPago = TipoPago;
                 cortina.Abono = 0;
-                cortina.Saldo = Valor;
+                cortina.Saldo = saldo;
                 cortina.FechaCreacion = DateTime.Now;
+                cortina.FechaActualizacion = DateTime.Now;
                 CommonBC.ModeloDecortex.Cortina.Add(cortina);
                 CommonBC.ModeloDecortex.SaveChanges();
                 return true;
@@ -109,6 +113,8 @@ namespace Negocio
                 cortina.TipoCortina = TipoCortina;
                 cortina.Descripcion = Descripcion;
                 cortina.TipoPago = TipoPago;
+                cortina.FechaCreacion = cortina.FechaCreacion;
+                cortina.FechaActualizacion = FechaActualizacion;
                 CommonBC.ModeloDecortex.SaveChanges();
                 return true;
             }

@@ -35,6 +35,7 @@
           <Property Name="TipoCortina" Type="varchar" MaxLength="50" />
           <Property Name="FechaCreacion" Type="datetime" />
           <Property Name="Descripcion" Type="varchar(max)" />
+          <Property Name="FechaActualizacion" Type="datetime" />
         </EntityType>
         <Association Name="FK_Cortina_Cliente">
           <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
@@ -92,6 +93,7 @@
           <Property Name="TipoCortina" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="FechaCreacion" Type="DateTime" Precision="3" />
           <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="FechaActualizacion" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Cliente" Relationship="Self.FK_Cortina_Cliente" FromRole="Cortina" ToRole="Cliente" />
         </EntityType>
         <Association Name="FK_Cortina_Cliente">
@@ -150,6 +152,7 @@
                 <ScalarProperty Name="TipoCortina" ColumnName="TipoCortina" />
                 <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
                 <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="FechaActualizacion" ColumnName="FechaActualizacion" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

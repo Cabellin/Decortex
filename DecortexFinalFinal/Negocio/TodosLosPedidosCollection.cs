@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Negocio
 {
-    public class CortinaCollection
+    public class TodosLosPedidosCollection
     {
-        private List<Cortina> GenerarListado(List<DALC.Cortina> cortina)
+        private List<TodosLosPedidos> GenerarListado(List<DALC.Cortina> cortina)
         {
-            List<Cortina> cortinas = new List<Cortina>();
+            List<TodosLosPedidos> cortinas = new List<TodosLosPedidos>();
             foreach (DALC.Cortina temp in cortina)
             {
-                Cortina c = new Cortina();
+                TodosLosPedidos c = new TodosLosPedidos();
                 c.Alto = temp.Alto;
                 c.Ancho = temp.Ancho;
                 c.ClienteCodigo = temp.ClienteCodigo;
@@ -25,25 +25,18 @@ namespace Negocio
                 c.Valor = temp.Valor;
                 c.TipoCortina = temp.TipoCortina;
                 c.Descripcion = temp.Descripcion;
-                c.TipoPago = temp.TipoPago;                
-                c.abono = temp.Abono;
-                c.saldo = temp.Saldo;
+                c.TipoPago = temp.TipoPago;
                 c.FechaCreacion = (DateTime)temp.FechaCreacion;
                 c.FechaActualizacion = (DateTime)temp.FechaActualizacion;
+                c.NombreCliente = CommonBC.ModeloDecortex.Cliente.First(v => v.Codigo == temp.ClienteCodigo).Nombre;
                 cortinas.Add(c);
             }
             return cortinas;
         }
 
-        public List<Cortina> ReadAll()
+        public List<TodosLosPedidos> ReadAll()
         {
             var cortinas = CommonBC.ModeloDecortex.Cortina;
-            return GenerarListado(cortinas.ToList());
-        }
-
-        public List<Cortina> Read(int codigoCliente)
-        {
-            var cortinas = CommonBC.ModeloDecortex.Cortina.Where(v => v.ClienteCodigo == codigoCliente);
             return GenerarListado(cortinas.ToList());
         }
 

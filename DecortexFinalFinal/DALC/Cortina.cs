@@ -29,6 +29,7 @@ namespace DALC
         public string TipoCortina { get; set; }
         public Nullable<System.DateTime> FechaCreacion { get; set; }
         public string Descripcion { get; set; }
+        public Nullable<System.DateTime> FechaActualizacion { get; set; }
     
         public virtual Cliente Cliente { get; set; }
     }
