@@ -91,6 +91,11 @@ namespace Decortex
             txtTela.Text = string.Empty;
             txtPosicion.Text = string.Empty;
             txtCodigo.Text = string.Empty;
+            txtPrecio.Text = string.Empty;
+            txtDescripcion.Text = string.Empty;
+            ddlCortina.SelectedItem = "Seleccione";
+            ddlPago.SelectedItem = "Seleccione";
+            chkPrecio.IsChecked = false;
         }
 
         private void btn_agregar_Click(object sender, RoutedEventArgs e)
@@ -104,14 +109,23 @@ namespace Decortex
             txtTela.Text = string.Empty;
             txtPosicion.Text = string.Empty;
             txtCodigo.Text = string.Empty;
+            txtPrecio.Text = string.Empty;
+            txtDescripcion.Text = string.Empty;
+            ddlCortina.SelectedItem = "Seleccione";
+            ddlPago.SelectedItem = "Seleccione";
+            chkPrecio.IsChecked = false;
         }
 
         private float metroCuadrado()
         {
             float metrocuadrado = 0;
+            double round = 0;
             try
             {
                 metrocuadrado = float.Parse(txtAncho.Text) * float.Parse(txtAlto.Text);
+                round = Math.Round(metrocuadrado,-1);
+                metrocuadrado = float.Parse(round.ToString());
+                
             }
             catch (Exception)
             {
@@ -189,6 +203,41 @@ namespace Decortex
                 return;
             }
 
+            if (txtDescripcion.Text.Length == 0)
+            {
+                MessageBox.Show("Debe ingresar una descripción");
+                txtPosicion.Text = string.Empty;
+                return;
+            }
+
+            if (txtPrecio.Text.Length == 0)
+            {
+                MessageBox.Show("Debe ingresar un precio");
+                txtPosicion.Text = string.Empty;
+                return;
+            }
+
+            try
+            {
+                float.Parse(txtPrecio.Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("El campo precio debe ser numérico");
+            }
+
+            if (ddlCortina.SelectedItem.Equals("Seleccione"))
+            {
+                MessageBox.Show("Debe seleccionar un tipo de cortina");
+                return;
+            }
+
+            if (ddlPago.SelectedItem.Equals("Seleccione"))
+            {
+                MessageBox.Show("Debe seleccionar un medio de pago");
+                return;
+            }
+
             Cortina c = new Cortina();
             c.Ubicacion = txtUbicacion.Text;
             c.Ancho = float.Parse(txtAncho.Text);
@@ -196,7 +245,13 @@ namespace Decortex
             c.Tela = txtTela.Text;
             c.Posicion = txtPosicion.Text;
             c.MetrosCuadrados = this.metroCuadrado();
-            c.Valor = this.valor();
+            c.Valor = int.Parse(txtPrecio.Text);
+            c.Descripcion = txtDescripcion.Text;
+            c.abono = 0;
+            c.saldo = int.Parse(txtPrecio.Text);
+            c.FechaCreacion = DateTime.Now;
+            c.TipoPago = ddlPago.SelectedItem.ToString();
+            c.TipoCortina = ddlCortina.SelectedItem.ToString();
             c.ClienteCodigo = Properties.Settings.Default.Codigo;
             
             if (c.Create())
@@ -299,6 +354,41 @@ namespace Decortex
                 return;
             }
 
+            if (txtDescripcion.Text.Length == 0)
+            {
+                MessageBox.Show("Debe ingresar una descripción");
+                txtPosicion.Text = string.Empty;
+                return;
+            }
+
+            if (txtPrecio.Text.Length == 0)
+            {
+                MessageBox.Show("Debe ingresar un precio");
+                txtPosicion.Text = string.Empty;
+                return;
+            }
+
+            try
+            {
+                float.Parse(txtPrecio.Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("El campo precio debe ser numérico");
+            }
+
+            if (ddlCortina.SelectedItem.Equals("Seleccione"))
+            {
+                MessageBox.Show("Debe seleccionar un tipo de cortina");
+                return;
+            }
+
+            if (ddlPago.SelectedItem.Equals("Seleccione"))
+            {
+                MessageBox.Show("Debe seleccionar un medio de pago");
+                return;
+            }
+
             Cortina c = new Cortina();
             c.Id = int.Parse(txtCodigo.Text);
             c.Ubicacion = txtUbicacion.Text;
@@ -307,7 +397,13 @@ namespace Decortex
             c.Tela = txtTela.Text;
             c.Posicion = txtPosicion.Text;
             c.MetrosCuadrados = this.metroCuadrado();
-            c.Valor = this.valor();
+            c.Valor = int.Parse(txtPrecio.Text);
+            c.Descripcion = txtDescripcion.Text;
+            c.abono = 0;
+            c.saldo = int.Parse(txtPrecio.Text);
+            c.FechaCreacion = DateTime.Now;
+            c.TipoPago = ddlPago.SelectedItem.ToString();
+            c.TipoCortina = ddlCortina.SelectedItem.ToString();
             c.ClienteCodigo = Properties.Settings.Default.Codigo;
 
             if (c.Update())
@@ -332,6 +428,11 @@ namespace Decortex
                 txtAlto.Text = af.Alto.ToString();
                 txtAncho.Text = af.Ancho.ToString();
                 txtCodigo.Text = af.Id.ToString();
+                ddlCortina.SelectedItem = af.TipoCortina.ToString();
+                ddlPago.SelectedItem = af.TipoPago.ToString();
+                txtDescripcion.Text = af.Descripcion;
+                txtPrecio.Text = af.Valor.ToString();
+
             }
         }
 
@@ -353,6 +454,11 @@ namespace Decortex
             txtTela.Text = string.Empty;
             txtPosicion.Text = string.Empty;
             txtCodigo.Text = string.Empty;
+            ddlPago.SelectedItem = "Seleccione";
+            ddlCortina.SelectedItem = "Seleccione";
+            txtPrecio.Text = string.Empty;
+            txtDescripcion.Text = string.Empty;
+            chkPrecio.IsChecked = false;
         }
 
         private void txtUbicacion_PreviewTextInput(object sender, TextCompositionEventArgs e)
@@ -382,6 +488,15 @@ namespace Decortex
                 e.Handled = false;
             else
 
+                e.Handled = true;
+        }
+
+        private void txtTelefono_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            int ascci = Convert.ToInt32(Convert.ToChar(e.Text));
+            if (ascci >= 48 && ascci <= 57 || ascci == 43)
+                e.Handled = false;
+            else
                 e.Handled = true;
         }
 

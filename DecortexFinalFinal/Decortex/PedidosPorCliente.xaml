@@ -32,14 +32,14 @@
         <Button x:Name="btn_Ver" Content="Pago Pedido" Height="38" Margin="692,588,131,0" VerticalAlignment="Top" Background="#FF5DA8B4" FontFamily="Verdana" FontSize="18" Click="btn_Ver_Click"/>
         <Label x:Name="label_Copy4" Content="Descripción / Color:" HorizontalAlignment="Left" Margin="30,451,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.851,-0.372" FontFamily="Tahoma" FontSize="16"/>
         <TextBox x:Name="txtDescripcion" HorizontalAlignment="Left" Height="23" Margin="195,457,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="386" FontFamily="Verdana" FontSize="16" PreviewTextInput="txtUbicacion_PreviewTextInput"/>
-        <Label x:Name="label_Copy6" Content="Tipo de Pago:" HorizontalAlignment="Left" Margin="71,501,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.851,-0.372" FontFamily="Tahoma" FontSize="16"/>
-        <ComboBox x:Name="ddlPago" HorizontalAlignment="Left" Margin="195,508,0,0" VerticalAlignment="Top" Width="270" Height="23">
-            
+        <Label x:Name="label_Copy6" Content="Medio de Pago:" HorizontalAlignment="Left" Margin="59,502,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.851,-0.372" FontFamily="Tahoma" FontSize="16"/>
+        <ComboBox x:Name="ddlPago" HorizontalAlignment="Left" Margin="195,508,0,0" VerticalAlignment="Top" Width="270" Height="23" FontFamily="Verdana" FontSize="16">
+
         </ComboBox>
-        <ComboBox x:Name="ddlCortina" HorizontalAlignment="Left" Margin="682,402,0,0" VerticalAlignment="Top" Width="257"/>
+        <ComboBox x:Name="ddlCortina" HorizontalAlignment="Left" Margin="682,402,0,0" VerticalAlignment="Top" Width="257" FontFamily="Verdana" FontSize="16"/>
         <Label x:Name="label_Copy7" Content="Cortina:" HorizontalAlignment="Left" Margin="605,401,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.851,-0.372" FontFamily="Tahoma" FontSize="16" Width="77"/>
         <Label x:Name="label_Copy8" Content="Precio:" HorizontalAlignment="Left" Margin="610,501,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.851,-0.372" FontFamily="Tahoma" FontSize="16" Width="72"/>
-        <TextBox x:Name="txtPrecio" HorizontalAlignment="Left" Height="23" Margin="682,508,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="257" FontFamily="Verdana" FontSize="16" PreviewTextInput="txtTela_PreviewTextInput"/>
+        <TextBox x:Name="txtPrecio" HorizontalAlignment="Left" Height="23" Margin="682,508,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="257" FontFamily="Verdana" FontSize="16" PreviewTextInput="txtTelefono_PreviewTextInput"/>
         <CheckBox x:Name="chkPrecio" HorizontalAlignment="Left" Margin="584,508,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.562,-0.867" Checked="chkPrecio_Checked" Unchecked="chkPrecio_Unchecked"/>
 
     </Grid>

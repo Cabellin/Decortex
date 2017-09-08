@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Runtime.InteropServices;
 using System.Windows.Interop;
+using Negocio;
 
 namespace Decortex
 {
@@ -37,6 +38,24 @@ namespace Decortex
             WindowInteropHelper helper = new WindowInteropHelper(this);
             IntPtr hwnd = GetSystemMenu(helper.Handle, false);
             DeleteMenu(hwnd, SC_CLOSE, 0);
+        }
+
+        private void btn_Abono_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void dgPago_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Cortina af = new Cortina();
+            af = (Cortina)dgPago.SelectedItem;
+            if (af != null)
+            {
+                txtPrecio.Text = af.Valor.ToString();
+                txtAbono.Text = af.abono.ToString();
+                txtSaldoActual.Text = af.saldo.ToString();
+
+            }
         }
     }
 }

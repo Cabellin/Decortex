@@ -35,8 +35,11 @@ namespace Negocio
             Valor = 0;
             ClienteCodigo = 0;
             TipoCortina = string.Empty;
+            Descripcion = string.Empty;
+            TipoPago = string.Empty;
             abono = 0;
             saldo = 0;
+            FechaCreacion = DateTime.Now;
         }
 
         public Cortina()
