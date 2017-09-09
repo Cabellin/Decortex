@@ -47,5 +47,16 @@ namespace Negocio
             return GenerarListado(cortinas.ToList());
         }
 
+        public List<Cortina> ReadDeudas(int codigoCliente)
+        {
+            var cortinas = CommonBC.ModeloDecortex.Cortina.Where(v => v.ClienteCodigo == codigoCliente && v.Saldo > 0);
+            return GenerarListado(cortinas.ToList());
+        }
+
+        public List<Cortina> ReadDeudas2Weeks(int codigoCliente)
+        {
+            var cortinas = CommonBC.ModeloDecortex.Cortina.SqlQuery("select distinct co.* from DecortexDB.dbo.Cliente c, DecortexDB.dbo.Cortina co where co.Saldo > 0 and DATEDIFF(day, co.FechaCreacion, GETDATE()) >= 14 and co.ClienteCodigo = c.Codigo and ClienteCodigo =" + codigoCliente +";");
+            return GenerarListado(cortinas.ToList());
+        }
     }
 }

@@ -124,6 +124,22 @@ namespace Negocio
             }
         }
 
+        public bool abonar()
+        {
+            try
+            {
+                DALC.Cortina cortina = CommonBC.ModeloDecortex.Cortina.First(v => v.Id == Id);
+                cortina.Saldo = saldo;
+                cortina.Abono = abono;
+                CommonBC.ModeloDecortex.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
         public bool Delete()
         {
             try

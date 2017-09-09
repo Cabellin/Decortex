@@ -29,7 +29,8 @@ namespace Decortex
 
         public void cargarLista()
         {
-
+            ClienteCollection c = new ClienteCollection();
+            dataGrid.ItemsSource = c.Deudores2Weeks();
         }
 
         private void btn_Pago_Click(object sender, RoutedEventArgs e)
@@ -43,9 +44,9 @@ namespace Decortex
 
             if (Application.Current.Windows.OfType<Pago>().Count() == 0)
             {
-                Properties.Settings.Default.idCortina = int.Parse(txtCodigo.Text);
+                Properties.Settings.Default.Codigo = int.Parse(txtCodigo.Text);
 
-                Pago p = new Pago();
+                Pago2 p = new Pago2();
                 p.Show();
                 Close();
             }
@@ -53,11 +54,11 @@ namespace Decortex
 
         private void dataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Cortina af = new Cortina();
-            af = (Cortina)dataGrid.SelectedItem;
+            Cliente af = new Cliente();
+            af = (Cliente)dataGrid.SelectedItem;
             if (af != null)
             {
-                txtCodigo.Text = af.Id.ToString();
+                txtCodigo.Text = af.Codigo.ToString();
             }
         }
     }

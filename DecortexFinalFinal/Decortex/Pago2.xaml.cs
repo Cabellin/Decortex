@@ -19,11 +19,11 @@ using System.Data;
 namespace Decortex
 {
     /// <summary>
-    /// Lógica de interacción para Pago.xaml
+    /// Lógica de interacción para Pago2.xaml
     /// </summary>
-    public partial class Pago : Window
+    public partial class Pago2 : Window
     {
-        public Pago()
+        public Pago2()
         {
             InitializeComponent();
             CargarLista();
@@ -90,7 +90,7 @@ namespace Decortex
         private void CargarLista()
         {
             CortinaCollection c = new CortinaCollection();
-            dgPago.ItemsSource = c.ReadDeudas(Properties.Settings.Default.Codigo);
+            dgPago.ItemsSource = c.ReadDeudas2Weeks(Properties.Settings.Default.Codigo);
         }
 
         private void dgPago_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -108,7 +108,7 @@ namespace Decortex
 
         private void btn_Volver_Click(object sender, RoutedEventArgs e)
         {
-            Principal pri = new Principal();
+            ListaDeudores pri = new ListaDeudores();
             pri.Show();
             this.Close();
         }

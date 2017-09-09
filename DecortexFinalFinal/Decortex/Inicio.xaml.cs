@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Negocio;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,7 @@ namespace Decortex
         public Inicio()
         {
             InitializeComponent();
+            hayDeudores();
         }
 
         private void btn_Clientes_Click(object sender, RoutedEventArgs e)
@@ -51,5 +53,18 @@ namespace Decortex
             }
         }
 
+        private void hayDeudores()
+        {
+            ClienteCollection c = new ClienteCollection();
+            List<Cliente> asdf = c.Deudores2Weeks();
+            if (c.Deudores2Weeks().Count() > 0)
+            {
+                lblHayDeudores.Content = "Hay deudores!!!";
+            }
+            else
+            {
+                lblHayDeudores.Content = "";
+            }
+        }
     }
 }
