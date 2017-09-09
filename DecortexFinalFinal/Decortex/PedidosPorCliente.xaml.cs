@@ -519,25 +519,6 @@ namespace Decortex
                 e.Handled = true;
         }
 
-        private void btn_Ver_Click(object sender, RoutedEventArgs e)
-        {
-            if (txtCodigo.Text.Length == 0)
-            {
-                MessageBox.Show("Debe Seleccionar un Código");
-                txtCodigo.Text = string.Empty;
-                return;
-            }
-
-            if (Application.Current.Windows.OfType<Pago>().Count() == 0)
-            {
-                Properties.Settings.Default.idCortina = int.Parse(txtCodigo.Text);
-
-                Pago p = new Pago();
-                p.Show();
-                Close();
-            }
-        }
-
         private void txtAncho_TextChanged(object sender, TextChangedEventArgs e)
         {
             if (!txtAlto.Text.Equals("") && !txtAncho.Text.Equals(""))

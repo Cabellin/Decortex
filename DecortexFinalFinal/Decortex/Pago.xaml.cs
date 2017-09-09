@@ -55,10 +55,25 @@ namespace Decortex
                 return;
             }
 
-            if (int.Parse(txtNuevoAbono.Text) == 0)
+            if (int.Parse(txtNuevoAbono.Text) > int.Parse(txtSaldoActual.Text))
             {
-                MessageBox.Show("Abono debe ser mayor a 0");
+                MessageBox.Show("Abono debe ser menor a saldo actual");
                 return;
+            }
+
+            Cortina c = new Cortina();
+            c.Id = Properties.Settings.Default.idCortina;
+            c.abono = c.abono + int.Parse(txtAbono.Text);
+            c.saldo = c.saldo - c.abono;
+            c.ClienteCodigo = Properties.Settings.Default.Codigo;
+
+            if (c.Update())
+            {
+                MessageBox.Show("Abono realizado");
+            }
+            else
+            {
+                MessageBox.Show("Abono no realizado");
             }
 
         }

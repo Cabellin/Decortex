@@ -25,12 +25,13 @@
         <Label x:Name="label_Copy4" Content="Especificaciones Técnicas:" HorizontalAlignment="Left" Margin="76,186,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.851,-0.372" FontFamily="Tahoma" FontSize="16"/>
         <TextBox x:Name="txtEspecificaciones" HorizontalAlignment="Left" Height="23" MaxLength="100" Margin="287,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="607" FontFamily="Verdana" FontSize="16" PreviewTextInput="txtEspecificaciones_PreviewTextInput"/>
         <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="205" Margin="46,339,0,0" VerticalAlignment="Top" Width="908" FontSize="16" FontFamily="Verdana" CanUserAddRows="False" SelectionChanged="dataGrid_SelectionChanged"/>
-        <Button x:Name="btn_agregar" Content="Agregar" Height="38" Margin="439,242,383,0" VerticalAlignment="Top" Background="#FF5DA8B4" FontFamily="Verdana" FontSize="18" Click="btn_agregar_Click"/>
+        <Button x:Name="btn_agregar" Content="Agregar" Height="38" Margin="438,256,384,0" VerticalAlignment="Top" Background="#FF5DA8B4" FontFamily="Verdana" FontSize="18" Click="btn_agregar_Click"/>
         <Button x:Name="btn_Eliminar" Content="Eliminar" Height="38" Margin="518,665,304,0" VerticalAlignment="Top" Background="#FF5DA8B4" FontFamily="Verdana" FontSize="18" Click="btn_Eliminar_Click"/>
         <Button x:Name="btn_buscar" Content="Buscar Pedidos" Height="38" Margin="753,665,54,0" VerticalAlignment="Top" Background="#FF5DA8B4" FontFamily="Verdana" FontSize="18" Click="btn_buscar_Click"/>
-        <Label x:Name="label_Copy5" Content="Filtrador por Nombre:" HorizontalAlignment="Left" Margin="60,595,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.851,-0.372" FontFamily="Tahoma" FontSize="16"/>
-        <TextBox x:Name="txtfiltrador" HorizontalAlignment="Left" Height="23" Margin="243,595,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="328" FontFamily="Verdana" FontSize="16" PreviewTextInput="txtfiltrador_PreviewTextInput" TextChanged="txtfiltrador_TextChanged"/>
-        <Button x:Name="btn_Editar" Content="Editar" Height="38" Margin="753,592,54,0" VerticalAlignment="Top" Background="#FF5DA8B4" FontFamily="Verdana" FontSize="18" Click="btn_Editar_Click"/>
+        <Label x:Name="label_Copy5" Content="Filtrador:" HorizontalAlignment="Left" Margin="50,597,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.851,-0.372" FontFamily="Tahoma" FontSize="16"/>
+        <TextBox x:Name="txtfiltrador" HorizontalAlignment="Left" Height="23" Margin="172,607,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" FontFamily="Verdana" FontSize="16" PreviewTextInput="txtfiltrador_PreviewTextInput" TextChanged="txtfiltrador_TextChanged"/>
+        <Button x:Name="btn_Editar" Content="Editar" Height="38" Margin="518,592,304,0" VerticalAlignment="Top" Background="#FF5DA8B4" FontFamily="Verdana" FontSize="18" Click="btn_Editar_Click"/>
+        <Button x:Name="btn_Ver" Content="Pago Pedido" Height="38" Margin="753,592,54,0" VerticalAlignment="Top" Background="#FF5DA8B4" FontFamily="Verdana" FontSize="18" Click="btn_Pago_Click"/>
 
     </Grid>
 </Window>

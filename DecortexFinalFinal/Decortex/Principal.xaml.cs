@@ -402,5 +402,24 @@ namespace Decortex
             }
             dataGrid.ItemsSource = c.Filtrados(txtfiltrador.Text);
         }
+
+        private void btn_Pago_Click(object sender, RoutedEventArgs e)
+        {
+            if (txtCodigo.Text.Length == 0)
+            {
+                MessageBox.Show("Debe Seleccionar un Código");
+                txtCodigo.Text = string.Empty;
+                return;
+            }
+
+            if (Application.Current.Windows.OfType<Pago>().Count() == 0)
+            {
+                Properties.Settings.Default.Codigo = int.Parse(txtCodigo.Text);
+
+                Pago p = new Pago();
+                p.Show();
+                Close();
+            }
+        }
     }
 }
