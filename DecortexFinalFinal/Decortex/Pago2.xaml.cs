@@ -90,7 +90,7 @@ namespace Decortex
         private void CargarLista()
         {
             CortinaCollection c = new CortinaCollection();
-            dgPago.ItemsSource = c.ReadDeudas2Weeks(Properties.Settings.Default.Codigo);
+            dgPago.ItemsSource = c.ReadDeudas(Properties.Settings.Default.Codigo);
         }
 
         private void dgPago_SelectionChanged(object sender, SelectionChangedEventArgs e)

@@ -56,8 +56,8 @@ namespace Decortex
         private void hayDeudores()
         {
             ClienteCollection c = new ClienteCollection();
-            List<Cliente> asdf = c.Deudores2Weeks();
-            if (c.Deudores2Weeks().Count() > 0)
+            List<Cliente> asdf = c.Deudores();
+            if (c.Deudores().Count() > 0)
             {
                 lblHayDeudores.Content = "Hay deudores!!!";
             }

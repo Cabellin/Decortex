@@ -66,8 +66,8 @@ namespace Decortex
 
         private void dataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Cortina af = new Cortina();
-            af = (Cortina)dataGrid.SelectedItem;
+            TodosLosPedidos af = new TodosLosPedidos();
+            af = (TodosLosPedidos)dataGrid.SelectedItem;
             if (af != null)
             {
                 txtCodigo.Text = af.Id.ToString();

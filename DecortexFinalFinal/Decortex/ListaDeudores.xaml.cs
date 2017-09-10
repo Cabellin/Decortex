@@ -30,7 +30,7 @@ namespace Decortex
         public void cargarLista()
         {
             ClienteCollection c = new ClienteCollection();
-            dataGrid.ItemsSource = c.Deudores2Weeks();
+            dataGrid.ItemsSource = c.Deudores();
         }
 
         private void btn_Pago_Click(object sender, RoutedEventArgs e)
