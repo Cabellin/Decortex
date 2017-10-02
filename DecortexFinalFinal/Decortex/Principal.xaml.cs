@@ -39,62 +39,32 @@ namespace Decortex
                 txtnombre.Text = string.Empty;
                 return;
             }
-            else
+
+            if (txtDireccion.Text.Length == 0)
             {
-                if (txtDireccion.Text.Length == 0)
-                {
-                    MessageBox.Show("Debe ingresar una dirección");
-                    txtDireccion.Text = string.Empty;
-                    return;
-                }
-                else
-                {
-                    if (txtCorreo.Text.Length == 0)
-                    {
-                        MessageBox.Show("Debe ingresar un Correo");
-                        txtCorreo.Text = string.Empty;
-                        return;
-                    }
-                    else
-                    {
-                        if (email_bien_escrito(txtCorreo.Text) == false)
-                        {
-                            MessageBox.Show("Correo debe seguir el patrón 'a@a.a'");
-                            txtCorreo.Text = string.Empty;
-                            return;
-                        }
-                        else
-                        {
-                            if (txtTelefono.Text.Length == 0)
-                            {
-                                MessageBox.Show("Debe ingresar un teléfono");
-                                txtTelefono.Text = string.Empty;
-                                return;
-                            }
-                            else
-                            {
-                                if (txtEspecificaciones.Text.Length == 0)
-                                {
-                                    MessageBox.Show("Debe ingresar una especificación");
-                                    txtEspecificaciones.Text = string.Empty;
-                                    return;
-                                }
-                            }
-                        }
-                    }
-                }
+                MessageBox.Show("Debe ingresar una dirección");
+                txtDireccion.Text = string.Empty;
+                return;
+            }
+
+
+            if (txtTelefono.Text.Length == 0)
+            {
+                MessageBox.Show("Debe ingresar un teléfono");
+                txtTelefono.Text = string.Empty;
+                return;
             }
 
             try
             {
                 int.Parse(txtTelefono.Text);
             }
-            catch (Exception)
+            catch
             {
-                MessageBox.Show("Debe ingresar un número en el campo Teléfono");
+                MessageBox.Show("Campo teléfono debe ser numérico");
+                txtTelefono.Text = string.Empty;
                 return;
             }
-                     
 
             Cliente c = new Cliente();
             c.Nombre = txtnombre.Text;
@@ -249,59 +219,30 @@ namespace Decortex
                 txtnombre.Text = string.Empty;
                 return;
             }
-            else
+
+            if (txtDireccion.Text.Length == 0)
             {
-                if (txtDireccion.Text.Length == 0)
-                {
-                    MessageBox.Show("Debe ingresar una dirección");
-                    txtDireccion.Text = string.Empty;
-                    return;
-                }
-                else
-                {
-                    if (txtCorreo.Text.Length == 0)
-                    {
-                        MessageBox.Show("Debe ingresar un Correo");
-                        txtCorreo.Text = string.Empty;
-                        return;
-                    }
-                    else
-                    {
-                        if (email_bien_escrito(txtCorreo.Text) == false)
-                        {
-                            MessageBox.Show("Correo debe seguir el patrón 'a@a.a'");
-                            txtCorreo.Text = string.Empty;
-                            return;
-                        }
-                        else
-                        {
-                            if (txtTelefono.Text.Length == 0)
-                            {
-                                MessageBox.Show("Debe ingresar un teléfono");
-                                txtTelefono.Text = string.Empty;
-                                return;
-                            }
-                            else
-                            {
-                                if (txtEspecificaciones.Text.Length == 0)
-                                {
-                                    MessageBox.Show("Debe ingresar una especificación");
-                                    txtEspecificaciones.Text = string.Empty;
-                                    return;
-                                }
-                            }
-                        }
-                    }
-                }
+                MessageBox.Show("Debe ingresar una dirección");
+                txtDireccion.Text = string.Empty;
+                return;
+            }
+
+
+            if (txtTelefono.Text.Length == 0)
+            {
+                MessageBox.Show("Debe ingresar un teléfono");
+                txtTelefono.Text = string.Empty;
+                return;
             }
 
             try
             {
                 int.Parse(txtTelefono.Text);
             }
-            catch (Exception)
+            catch
             {
-                MessageBox.Show("Debe ingresar un número en el campo Teléfono");
+                MessageBox.Show("Campo teléfono debe ser numérico");
+                txtTelefono.Text = string.Empty;
                 return;
             }
 

@@ -12,15 +12,15 @@
     </Window.Background>
 
     <Grid>
-        <Label x:Name="label" Content="Nombre:" HorizontalAlignment="Left" Margin="76,31,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.851,-0.372" FontFamily="Tahoma" FontSize="16"/>
+        <Label x:Name="label" Content="Nombre(*):" HorizontalAlignment="Left" Margin="76,31,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.851,-0.372" FontFamily="Tahoma" FontSize="16"/>
         <TextBox x:Name="txtnombre" HorizontalAlignment="Left" Height="23" MaxLength="30" Margin="181,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="355" FontFamily="Verdana" FontSize="16" PreviewTextInput="txtnombre_PreviewTextInput"/>
-        <Label x:Name="label_Copy" Content="Dirección:" HorizontalAlignment="Left" Margin="76,82,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.851,-0.372" FontFamily="Tahoma" FontSize="16"/>
+        <Label x:Name="label_Copy" Content="Dirección(*):" HorizontalAlignment="Left" Margin="76,82,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.851,-0.372" FontFamily="Tahoma" FontSize="16"/>
         <TextBox x:Name="txtDireccion" HorizontalAlignment="Left" Height="23" MaxLength="49" Margin="181,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="355" FontFamily="Verdana" FontSize="16" PreviewTextInput="txtDireccion_PreviewTextInput"/>
         <Label x:Name="label_Copy1" Content="Código:" HorizontalAlignment="Left" Margin="60,662,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.851,-0.372" FontFamily="Tahoma" FontSize="16"/>
         <TextBox x:Name="txtCodigo" HorizontalAlignment="Left" Height="23" Margin="172,668,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" FontFamily="Verdana" FontSize="16"/>
         <Label x:Name="label_Copy2" Content="Correo:" HorizontalAlignment="Left" Margin="76,137,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.851,-0.372" FontFamily="Tahoma" FontSize="16"/>
         <TextBox x:Name="txtCorreo" HorizontalAlignment="Left" Height="23" MaxLength="49" Margin="181,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="355" FontFamily="Verdana" FontSize="16" PreviewTextInput="txtCorreo_PreviewTextInput"/>
-        <Label x:Name="label_Copy3" Content="Teléfono:" HorizontalAlignment="Left" Margin="613,104,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.851,-0.372" FontFamily="Tahoma" FontSize="16"/>
+        <Label x:Name="label_Copy3" Content="Teléfono(*):" HorizontalAlignment="Left" Margin="613,104,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.851,-0.372" FontFamily="Tahoma" FontSize="16"/>
         <TextBox x:Name="txtTelefono" HorizontalAlignment="Left" Height="23" MaxLength="9" Margin="720,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174" FontFamily="Verdana" FontSize="16" PreviewTextInput="txtTelefono_PreviewTextInput"/>
         <Label x:Name="label_Copy4" Content="Especificaciones Técnicas:" HorizontalAlignment="Left" Margin="76,186,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.851,-0.372" FontFamily="Tahoma" FontSize="16"/>
         <TextBox x:Name="txtEspecificaciones" HorizontalAlignment="Left" Height="23" MaxLength="100" Margin="287,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="607" FontFamily="Verdana" FontSize="16" PreviewTextInput="txtEspecificaciones_PreviewTextInput"/>
