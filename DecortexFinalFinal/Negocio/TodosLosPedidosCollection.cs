@@ -23,6 +23,8 @@ namespace Negocio
                 c.Tela = temp.Tela;
                 c.Ubicacion = temp.Ubicacion;
                 c.Valor = temp.Valor;
+                c.abono = temp.Abono;
+                c.saldo = temp.Saldo;
                 c.TipoCortina = temp.TipoCortina;
                 c.Descripcion = temp.Descripcion;
                 c.TipoPago = temp.TipoPago;

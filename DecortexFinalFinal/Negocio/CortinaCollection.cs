@@ -52,5 +52,11 @@ namespace Negocio
             var cortinas = CommonBC.ModeloDecortex.Cortina.Where(v => v.ClienteCodigo == codigoCliente && v.Saldo > 0);
             return GenerarListado(cortinas.ToList());
         }
+
+        public List<Cortina> ReadDeudas2(int codigoCliente)
+        {
+            var cortinas = CommonBC.ModeloDecortex.Cortina.Where(v => v.ClienteCodigo == codigoCliente && v.Saldo > 0 && v.Abono > 0);
+            return GenerarListado(cortinas.ToList());
+        }
     }
 }

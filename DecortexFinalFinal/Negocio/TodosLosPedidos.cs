@@ -22,8 +22,8 @@ namespace Negocio
         public string TipoCortina { get; set; }
         public string Descripcion { get; set; }
         public string TipoPago { get; set; }
-        public int abono { get; set; }
-        public int saldo { get; set; }
+        public int? abono { get; set; }
+        public int? saldo { get; set; }
         public DateTime FechaCreacion { get; set; }
 
         public DateTime FechaActualizacion { get; set; }

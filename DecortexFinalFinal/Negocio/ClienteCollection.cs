@@ -39,7 +39,7 @@ namespace Negocio
 
         public List<Cliente> Deudores()
         {
-            var clientes = CommonBC.ModeloDecortex.Cliente.SqlQuery("select distinct c.* from DecortexDB.dbo.Cliente c, DecortexDB.dbo.Cortina co where co.Saldo > 0 and co.ClienteCodigo = c.Codigo;");
+            var clientes = CommonBC.ModeloDecortex.Cliente.SqlQuery("select distinct c.* from DecortexDB.dbo.Cliente c, DecortexDB.dbo.Cortina co where co.Saldo > 0 and co.Abono > 0 and co.ClienteCodigo = c.Codigo;");
             return GenerarListado(clientes.ToList());
         }
     }
