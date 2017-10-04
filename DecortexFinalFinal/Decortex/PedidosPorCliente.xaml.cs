@@ -186,27 +186,6 @@ namespace Decortex
                 return;
             }
 
-            if (txtTela.Text.Length == 0)
-            {
-                MessageBox.Show("Debe ingresar una tela");
-                txtTela.Text = string.Empty;
-                return;
-            }
-
-            if (txtPosicion.Text.Length == 0)
-            {
-                MessageBox.Show("Debe ingresar una posición");
-                txtPosicion.Text = string.Empty;
-                return;
-            }
-
-            if (txtDescripcion.Text.Length == 0)
-            {
-                MessageBox.Show("Debe ingresar una descripción");
-                txtPosicion.Text = string.Empty;
-                return;
-            }
-
             if (txtPrecio.Text.Length == 0)
             {
                 MessageBox.Show("Debe ingresar un precio");
